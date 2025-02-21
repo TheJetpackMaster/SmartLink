@@ -14,7 +14,6 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.message.ChatScreen
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.message.MessageScreen
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.swap.SwapScreen
-import com.smartlink.smartlinkapp.presentation.ui.mainscreen.MainScreen
 import com.smartlink.smartlinkapp.presentation.ui.scheduleClass.ScheduleClassScreen
 import com.smartlink.smartlinkapp.ui.theme.SmartLinkTheme
 
@@ -25,7 +24,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             SmartLinkTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MainScreen()
+                    ScheduleClassScreen()
                 }
             }
         }
