@@ -17,7 +17,7 @@ import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.sms.SmsScreen
 
 fun NavGraphBuilder.bottomNavHost(navController: NavController) {
     navigation(
-        startDestination = BottomNavRoutes.CommunityScreen.route,
+        startDestination = BottomNavRoutes.HomeScreen.route,
         route = BottomNavRoutes.BottomRoutes.route
     ) {
 
