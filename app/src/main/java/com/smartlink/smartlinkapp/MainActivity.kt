@@ -24,8 +24,6 @@ class MainActivity : ComponentActivity() {
         setContent {
             SmartLinkTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    ScheduleClassScreen()
-
 
                 }
             }
