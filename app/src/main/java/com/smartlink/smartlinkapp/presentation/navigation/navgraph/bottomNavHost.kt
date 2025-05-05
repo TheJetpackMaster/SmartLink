@@ -8,6 +8,7 @@ import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import androidx.navigation.navigation
 import com.smartlink.smartlinkapp.presentation.navigation.routes.BottomNavRoutes
+import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.homeSearch.HomeSearchScreen
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.community.CommunityScreen
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.home.HomeScreen
 import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.profile.ProfileScreen
@@ -17,7 +18,7 @@ import com.smartlink.smartlinkapp.presentation.ui.bottom_nav.sms.SmsScreen
 
 fun NavGraphBuilder.bottomNavHost(navController: NavController) {
     navigation(
-        startDestination = BottomNavRoutes.HomeScreen.route,
+        startDestination = BottomNavRoutes.HomeSearchScreen.route,
         route = BottomNavRoutes.BottomRoutes.route
     ) {
 
@@ -109,6 +110,24 @@ fun NavGraphBuilder.bottomNavHost(navController: NavController) {
             }
         ) {
             CommunityScreen(navController = navController)
+        }
+
+        // Home Search Screen
+        composable(BottomNavRoutes.HomeSearchScreen.route,
+            popEnterTransition = {
+                fadeIn(animationSpec = tween(250))
+            },
+            popExitTransition = {
+                fadeOut(animationSpec = tween(250))
+            },
+            enterTransition = {
+                fadeIn(animationSpec = tween(250))
+            },
+            exitTransition = {
+                fadeOut(animationSpec = tween(250))
+            }
+        ) {
+            HomeSearchScreen()
         }
     }
 }

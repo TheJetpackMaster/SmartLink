@@ -7,4 +7,5 @@ sealed class BottomNavRoutes(val route: String) {
     data object SwapSkillScreen : BottomNavRoutes(route = "SwapSkill_Screen")
     data object ProfileScreen : BottomNavRoutes(route = "Profile_Screen")
     data object CommunityScreen : BottomNavRoutes(route = "Community_Screen")
+    data object HomeSearchScreen : BottomNavRoutes(route = "HomeSearch_Screen")
 }
